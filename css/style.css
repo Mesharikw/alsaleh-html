@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Lemonada:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+}
+
+body {
+    padding-top: 60px;
+    background-color: #001;
+}
+
+/* Lower opacity of the container when menu is open */
+body.menu-open .container {
+    opacity: 0.3;
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+/* Menu Styling */
+.menu {
+    background: #123;
+    width: 45px;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    transition: width 0.3s ease;
+    z-index: 1000;
+}
+
+.menu:hover {
+    width: 150px;
+}
+
+.menu-content {
+    overflow-y: auto;
+    max-height: 100vh;
+    padding-right: 5px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    border-radius: 8px;
+    background: #0569d4;
+    transition: background-color 0.3s, transform 0.2s;
+    white-space: nowrap;
+}
+
+.menu ul li a span {
+    display: none;
+}
+
+.menu:hover ul li a span {
+    display: inline-block;
+}
+
+.menu ul li a:hover {
+    background: #0a3e91;
+    transform: scale(1.05);
+}
+
+.menu ul li.log-out a {
+    background: red;
+}
+
+.menu ul li.log-out a:hover {
+    background: #ff4444;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #123;
+    padding: 10px 0;
+    z-index: 1;
+    border-radius: 2px;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-right: 70px;
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #123;
+    padding: 15px;
+    height: 150px;
+    gap: 10px;
+    font-size: 25px;
+    border-radius: 12px;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.content:hover {
+    transform: translateY(-10px);
+    background-color: #0a3e91;
+}
+
+/* Table Styling */
+.table-container {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin-left: auto;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #123;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+th {
+    background-color: #0569d4;
+    color: #fff;
+}
+
+tr:hover {
+    background-color: #0a3e91;
+}
